@@ -30,12 +30,12 @@ class Scraper
     social_link.each do |link|
       if link.include?("linkedin")
         sindividual_student[:linkedin] = link
-      elsif link.indlue("twitter")
+      elsif link.include?("twitter")
         individual_student[:twitter] = link
       elsif link.include?("github")
         individual_student[:github] = link
       else
-        student[:blog] = link
+        individual_student[:blog] = link
       end
     end
       individual_student[:bio] = profile_page.css(".description-holder").children.css("p").text
