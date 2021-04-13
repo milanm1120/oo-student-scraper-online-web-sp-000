@@ -38,8 +38,8 @@ class Scraper
         individual_student[:blog] = link
       end
     end
-      individual_student[:bio] = profile_page.css(".description-holder").children.css("p").text
-      individual_student[:profile_quote] = profile_page.css(".profile-quote").children.text
+      individual_student[:bio] = profile_page.css(".description-holder").css("p").text
+      individual_student[:profile_quote] = profile_page.css(".profile-quote").text
       individual_student
   end
 
